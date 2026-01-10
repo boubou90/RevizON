@@ -12,7 +12,7 @@
 
 /**
  * SVT – Programme de 3e (Cycle 4 – Brevet)
- * FREE + PREMIUM
+ * Cours développés – FREE + PREMIUM
  * @type {Lesson[]}
  */
 export const svtCourses = [
@@ -24,18 +24,18 @@ export const svtCourses = [
   {
     id: 0,
     title: 'Les séismes et leur prévention',
-    content: `Un séisme est une vibration brutale du sol liée à la rupture de roches en profondeur.\n\nLes séismes sont dus aux mouvements des plaques tectoniques. Ils ne peuvent pas être prévus avec précision, mais leurs conséquences peuvent être limitées grâce à la prévention.`,
+    content: `Un séisme est une vibration brutale du sol provoquée par la rupture soudaine de roches en profondeur. Cette rupture libère une grande quantité d’énergie qui se propage sous forme d’ondes sismiques.\n\nLes séismes sont principalement liés aux mouvements des plaques tectoniques. Ils se produisent souvent le long des failles situées aux limites de ces plaques.\n\nOn ne peut pas empêcher ni prévoir précisément un séisme. En revanche, il est possible de limiter ses conséquences grâce à la prévention : construction de bâtiments parasismiques, information des populations et organisation des secours.\n\nLa prévention permet ainsi de réduire le nombre de victimes et l’importance des dégâts matériels.`,
     keyPoints: [
-      'Séisme = libération brutale d’énergie',
+      'Séisme = rupture de roches en profondeur',
+      'Libération d’énergie sous forme d’ondes sismiques',
       'Lien avec les plaques tectoniques',
-      'Magnitude et intensité',
-      'Zones à risques sismiques',
-      'Prévention des risques'
+      'Magnitude ≠ intensité',
+      'La prévention limite les risques'
     ],
     examples: [
-      'Failles tectoniques',
+      'Failles tectoniques actives',
       'Normes parasismiques',
-      'Exercices d’évacuation'
+      'Consignes de sécurité en cas de séisme'
     ],
     skills: [
       'Pratiquer des démarches scientifiques',
@@ -43,8 +43,8 @@ export const svtCourses = [
       'Comprendre les enjeux de sécurité des populations'
     ],
     brevetTips: [
-      'Séisme ≠ volcan.',
-      'Un séisme ne se prévoit pas, il se prévient.'
+      'Un séisme ne se prévoit pas, mais ses effets se préviennent.',
+      'La magnitude mesure l’énergie, l’intensité mesure les dégâts.'
     ],
     isPremium: false
   },
@@ -52,12 +52,12 @@ export const svtCourses = [
   {
     id: 1,
     title: 'Les volcans et leur surveillance',
-    content: `Les volcans permettent la remontée du magma à la surface.\n\nIl existe des volcans effusifs et explosifs. Leur surveillance permet d’anticiper les risques pour les populations.`,
+    content: `Un volcan est une structure géologique par laquelle du magma provenant du manteau terrestre remonte à la surface.\n\nOn distingue deux grands types de volcans. Les volcans effusifs produisent des coulées de lave fluides peu dangereuses. Les volcans explosifs provoquent des éruptions violentes accompagnées de projections, de cendres et de nuées ardentes.\n\nLes volcans sont souvent situés aux limites des plaques tectoniques ou au-dessus de points chauds.\n\nLa surveillance volcanique repose sur l’observation de nombreux paramètres : séismes, déformations du sol, émissions de gaz. Elle permet de réduire les risques pour les populations.`,
     keyPoints: [
-      'Origine du magma',
-      'Volcans effusifs / explosifs',
+      'Le magma provient du manteau',
+      'Volcans effusifs : éruptions calmes',
+      'Volcans explosifs : éruptions violentes',
       'Lien avec les plaques tectoniques',
-      'Risques volcaniques',
       'Surveillance scientifique'
     ],
     examples: [
@@ -80,18 +80,18 @@ export const svtCourses = [
   {
     id: 2,
     title: 'Aléa, enjeu et risque naturel',
-    content: `Un risque naturel résulte de la rencontre entre un aléa et des enjeux humains.\n\nLa prévention repose sur l’aménagement du territoire, l’information et les comportements adaptés.`,
+    content: `Un aléa est un phénomène naturel potentiellement dangereux, comme un séisme, une inondation ou une éruption volcanique.\n\nLes enjeux correspondent aux populations, aux biens et aux infrastructures exposés à cet aléa.\n\nLe risque naturel résulte donc de la rencontre entre un aléa et des enjeux.\n\nLa prévention repose sur l’aménagement du territoire, l’information des populations et l’adoption de comportements adaptés afin de limiter les conséquences des catastrophes.`,
     keyPoints: [
       'Aléa : phénomène naturel',
-      'Enjeu : populations et infrastructures',
+      'Enjeu : humains et infrastructures',
       'Risque = aléa + enjeux',
-      'Prévention et protection',
-      'Responsabilité humaine'
+      'La prévention réduit les dégâts',
+      'Rôle de l’action humaine'
     ],
     examples: [
-      'Inondations en zones urbanisées',
+      'Inondations en zone urbanisée',
       'Plans de prévention des risques',
-      'Cartes de zones à risques'
+      'Cartes des zones à risques'
     ],
     skills: [
       'Adopter un comportement éthique et responsable',
@@ -99,8 +99,8 @@ export const svtCourses = [
       'Exploiter des documents de prévention'
     ],
     brevetTips: [
-      'Définition classique du Brevet.',
-      'Toujours illustrer par un exemple.'
+      'Définition essentielle au Brevet.',
+      'Toujours illustrer avec un exemple précis.'
     ],
     isPremium: false
   },
@@ -112,10 +112,11 @@ export const svtCourses = [
   {
     id: 3,
     title: 'La nutrition des êtres vivants',
-    content: `Tous les êtres vivants ont besoin de matière et d’énergie.\n\nLes végétaux produisent leur matière organique grâce à la photosynthèse, contrairement aux animaux.`,
+    content: `Tous les êtres vivants ont besoin de matière et d’énergie pour vivre et se développer.\n\nLes végétaux chlorophylliens produisent leur propre matière organique grâce à la photosynthèse, à partir d’eau, de dioxyde de carbone et d’énergie lumineuse.\n\nLes animaux, eux, doivent consommer de la matière organique produite par d’autres êtres vivants.\n\nÀ l’échelle des cellules, la respiration permet de libérer l’énergie contenue dans la matière organique.`,
     keyPoints: [
-      'Besoins des cellules',
-      'Producteurs et consommateurs',
+      'Besoin de matière et d’énergie',
+      'Végétaux producteurs',
+      'Animaux consommateurs',
       'Photosynthèse',
       'Respiration cellulaire'
     ],
@@ -130,7 +131,7 @@ export const svtCourses = [
       'Utiliser un vocabulaire scientifique précis'
     ],
     brevetTips: [
-      'La photosynthèse produit de la matière organique.',
+      'La photosynthèse a lieu dans les chloroplastes.',
       'Elle nécessite lumière, CO₂ et eau.'
     ],
     isPremium: false
@@ -139,17 +140,18 @@ export const svtCourses = [
   {
     id: 4,
     title: 'Chaînes alimentaires et écosystèmes',
-    content: `Les relations alimentaires relient les êtres vivants d’un écosystème.\n\nCes relations forment des réseaux trophiques assurant l’équilibre du milieu.`,
+    content: `Dans un écosystème, les êtres vivants sont liés entre eux par des relations alimentaires.\n\nUne chaîne alimentaire est une succession d’êtres vivants où chacun se nourrit du précédent.\n\nL’ensemble des chaînes alimentaires forme un réseau trophique.\n\nL’équilibre d’un écosystème est fragile : la disparition ou l’introduction d’une espèce peut perturber tout le réseau.`,
     keyPoints: [
-      'Chaînes alimentaires',
-      'Réseaux trophiques',
-      'Producteurs / consommateurs / décomposeurs',
-      'Équilibre des écosystèmes'
+      'Chaîne alimentaire',
+      'Réseau trophique',
+      'Producteurs, consommateurs, décomposeurs',
+      'Équilibre des écosystèmes',
+      'Fragilité des milieux'
     ],
     examples: [
       'Herbe → lapin → renard',
-      'Disparition d’une espèce',
-      'Pollution d’un milieu'
+      'Pollution d’un milieu',
+      'Disparition d’un prédateur'
     ],
     skills: [
       'Modéliser des relations biologiques',
@@ -157,7 +159,7 @@ export const svtCourses = [
       'Interpréter des schémas'
     ],
     brevetTips: [
-      'Une perturbation affecte tout le réseau.',
+      'Une perturbation peut déséquilibrer tout l’écosystème.',
       'Toujours commencer par le producteur.'
     ],
     isPremium: true
@@ -166,9 +168,9 @@ export const svtCourses = [
   {
     id: 5,
     title: 'Biodiversité et évolution des espèces',
-    content: `La biodiversité correspond à la diversité du vivant.\n\nElle évolue sous l’effet de la sélection naturelle et des changements environnementaux.`,
+    content: `La biodiversité correspond à la diversité des êtres vivants présents sur Terre.\n\nAu cours du temps, les espèces évoluent sous l’effet de la sélection naturelle. Les individus les mieux adaptés à leur environnement ont plus de chances de survivre et de se reproduire.\n\nLes fossiles permettent de retracer l’histoire de la vie et de montrer que la biodiversité a beaucoup varié au cours des temps géologiques.`,
     keyPoints: [
-      'Diversité des espèces',
+      'Diversité du vivant',
       'Sélection naturelle',
       'Adaptation',
       'Fossiles',
@@ -198,7 +200,7 @@ export const svtCourses = [
   {
     id: 6,
     title: 'La reproduction humaine',
-    content: `La reproduction humaine permet la transmission de la vie.\n\nElle repose sur le fonctionnement coordonné des appareils reproducteurs.`,
+    content: `La reproduction humaine permet la transmission de la vie.\n\nElle repose sur le fonctionnement coordonné des appareils reproducteurs masculin et féminin.\n\nLa fécondation correspond à la rencontre d’un spermatozoïde et d’un ovule. La grossesse permet le développement de l’embryon puis du fœtus.\n\nLa contraception et la prévention des IST sont essentielles pour une sexualité responsable.`,
     keyPoints: [
       'Gamètes',
       'Fécondation',
@@ -217,8 +219,8 @@ export const svtCourses = [
       'Utiliser un vocabulaire scientifique précis'
     ],
     brevetTips: [
-      'Schémas très fréquents au Brevet.',
-      'Attention aux confusions vocabulaire.'
+      'Les schémas sont très fréquents au Brevet.',
+      'Attention aux confusions de vocabulaire.'
     ],
     isPremium: false
   },
@@ -226,11 +228,11 @@ export const svtCourses = [
   {
     id: 7,
     title: 'Le système immunitaire',
-    content: `Le système immunitaire protège l’organisme contre les agents pathogènes.\n\nIl existe une réponse rapide non spécifique et une réponse spécifique avec mémoire.`,
+    content: `Le système immunitaire protège l’organisme contre les agents pathogènes.\n\nLa réponse immunitaire non spécifique agit rapidement grâce aux barrières naturelles et à l’inflammation.\n\nLa réponse immunitaire spécifique met en jeu les lymphocytes et produit des anticorps. Elle laisse une mémoire immunitaire, utilisée lors de la vaccination.`,
     keyPoints: [
       'Agents pathogènes',
-      'Réponse immunitaire non spécifique',
-      'Réponse immunitaire spécifique',
+      'Réponse non spécifique',
+      'Réponse spécifique',
       'Anticorps',
       'Vaccination'
     ],
@@ -254,7 +256,7 @@ export const svtCourses = [
   {
     id: 8,
     title: 'Système nerveux et comportements responsables',
-    content: `Le système nerveux permet la transmission rapide d’informations.\n\nCertains comportements peuvent perturber son fonctionnement.`,
+    content: `Le système nerveux permet de recevoir, traiter et transmettre rapidement des informations.\n\nIl est constitué du cerveau, de la moelle épinière et des nerfs.\n\nLes neurones assurent la transmission du message nerveux.\n\nCertains comportements, comme la consommation de drogues ou d’alcool, peuvent perturber le fonctionnement du système nerveux.`,
     keyPoints: [
       'Cerveau, moelle épinière, nerfs',
       'Neurones',
