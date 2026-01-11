@@ -208,3 +208,4 @@ Projet éducatif - Tous droits réservés
 ## 🆘 Support
 
 Pour toute question ou bug, ouvrir une issue sur le repo.
+# Trigger rebuild
