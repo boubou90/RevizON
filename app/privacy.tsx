@@ -15,7 +15,7 @@ export default function PrivacyScreen() {
   const router = useRouter();
 
   const handleContact = () => {
-    Linking.openURL('mailto:hamid.bouteba@gmail.com');
+    Linking.openURL('mailto:contact@revizon.net');
   };
 
   return (
@@ -168,7 +168,7 @@ export default function PrivacyScreen() {
           </Text>
           <TouchableOpacity style={styles.contactButton} onPress={handleContact}>
             <Mail size={20} color={COLORS.white} />
-            <Text style={styles.contactButtonText}>hamid.bouteba@gmail.com</Text>
+            <Text style={styles.contactButtonText}>contact@revizon.net</Text>
           </TouchableOpacity>
         </View>
 
