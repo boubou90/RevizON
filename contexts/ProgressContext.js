@@ -98,6 +98,20 @@ export const ProgressProvider = ({ children }) => {
     }
   };
 
+  // Version async qui retourne true si c'était une nouvelle leçon
+  const markLessonComplete = async (subject, lessonId) => {
+    const key = `${subject}_${lessonId}`;
+    if (!progress.completedLessons.includes(key)) {
+      const newProgress = {
+        ...progress,
+        completedLessons: [...progress.completedLessons, key]
+      };
+      await saveProgress(newProgress);
+      return true; // Nouvelle leçon complétée
+    }
+    return false; // Déjà complétée
+  };
+
   const saveQuizScore = (lessonId, score) => {
     const newProgress = {
       ...progress,
@@ -118,10 +132,11 @@ export const ProgressProvider = ({ children }) => {
   };
 
   return (
-    <ProgressContext.Provider value={{ 
-      progress, 
-      completeLesson, 
-      saveQuizScore, 
+    <ProgressContext.Provider value={{
+      progress,
+      completeLesson,
+      markLessonComplete,
+      saveQuizScore,
       saveBrevetAttempt,
       getGlobalProgress,
       getSubjectProgress,

@@ -178,8 +178,10 @@ export const GamificationProvider = ({ children }) => {
 
   const checkMultiSubjectBadge = (progress) => {
     const subjects = ['math', 'french', 'history', 'sciences'];
+    // progress.completedLessons est un tableau de clés "subject_lessonId"
+    const completedLessons = progress?.completedLessons || [];
     const studiedSubjects = subjects.filter(
-      (subject) => progress[subject].completedLessons.length > 0
+      (subject) => completedLessons.some(key => key.startsWith(`${subject}_`))
     );
     if (studiedSubjects.length >= 4) {
       unlockBadge('multi_subject');
