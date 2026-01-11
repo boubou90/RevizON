@@ -21,6 +21,7 @@ import {
   LogOut,
   Trash2,
   X,
+  Shield,
 } from 'lucide-react-native';
 import * as Sharing from 'expo-sharing';
 import ViewShot from 'react-native-view-shot';
@@ -215,6 +216,11 @@ export default function ProfileScreen() {
           </TouchableOpacity>
         </View>
 
+        <TouchableOpacity style={styles.privacyLink} onPress={() => router.push('/privacy' as any)}>
+          <Shield size={16} color={COLORS.gray} />
+          <Text style={styles.privacyLinkText}>Politique de confidentialité</Text>
+        </TouchableOpacity>
+
         <View style={styles.bottomSpace} />
       </ScrollView>
 
@@ -287,4 +293,6 @@ const styles = StyleSheet.create({
   socialButtonText: { color: COLORS.white, fontWeight: 'bold' },
   cancelButton: { padding: 16, alignItems: 'center' },
   cancelButtonText: { color: COLORS.gray, fontWeight: '600' },
+  privacyLink: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, marginTop: 24, padding: 12 },
+  privacyLinkText: { fontSize: 14, color: COLORS.gray, textDecorationLine: 'underline' },
 });
