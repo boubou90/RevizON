@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité - RéviZON</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2563EB;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #1E40AF;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2563EB;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #1E40AF;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: #FEF3C7;
+            padding: 20px;
+            border-left: 4px solid #F59E0B;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .info-box {
+            background: #DBEAFE;
+            padding: 20px;
+            border-left: 4px solid #2563EB;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background: #FEE2E2;
+            padding: 20px;
+            border-left: 4px solid #DC2626;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #2563EB;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .contact-box {
+            background: #10B981;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            color: white;
+            border: none;
+            margin-top: 0;
+        }
+
+        .contact-box a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .emoji {
+            font-size: 1.3em;
+            margin-right: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ddd;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Politique de Confidentialité - RéviZON</h1>
+        <p class="date">Dernière mise à jour : 14 janvier 2026</p>
+
+        <h2>Introduction</h2>
+        <p>
+            RéviZON ("nous", "notre" ou "l'application") est une application mobile éducative destinée aux élèves de 3ème en France.
+            Nous nous engageons à protéger la confidentialité de nos utilisateurs.
+        </p>
+        <p>
+            Cette politique de confidentialité explique quelles informations nous collectons, comment nous les utilisons,
+            et vos droits concernant vos données personnelles.
+        </p>
+
+        <h2>Informations que nous collectons</h2>
+
+        <h3>1. Informations d'identification</h3>
+        <p>Lors de la création de votre compte, nous collectons :</p>
+        <ul>
+            <li><strong>Adresse e-mail</strong> : Pour l'authentification et la récupération de compte</li>
+            <li><strong>Nom d'utilisateur</strong> : Pour personnaliser votre expérience</li>
+            <li><strong>Mot de passe</strong> : Stocké de manière sécurisée et chiffré via Supabase</li>
+        </ul>
+
+        <h3>2. Informations de progression</h3>
+        <p>Pour suivre votre apprentissage, nous collectons :</p>
+        <ul>
+            <li>Leçons consultées et complétées</li>
+            <li>Résultats des quiz et scores</li>
+            <li>Temps passé sur l'application</li>
+            <li>Badges et récompenses obtenus</li>
+            <li>Progression dans le programme scolaire</li>
+        </ul>
+
+        <h3>3. Informations de paiement</h3>
+        <div class="info-box">
+            <p><strong><span class="emoji">🔒</span>Important :</strong> Les paiements sont traités par <strong>Apple App Store</strong> (iOS) ou <strong>Google Play Store</strong> (Android).
+            Nous ne collectons <strong>JAMAIS</strong> directement vos informations bancaires.</p>
+        </div>
+
+        <h3>4. Informations publicitaires (Version gratuite uniquement)</h3>
+        <p>Pour les utilisateurs de la version gratuite, nous utilisons <strong>Google AdMob</strong> qui collecte :</p>
+        <ul>
+            <li><strong>Identifiant publicitaire</strong> (IDFA sur iOS, GAID sur Android)</li>
+            <li><strong>Adresse IP</strong> pour la géolocalisation générale</li>
+            <li><strong>Type d'appareil</strong> et version du système d'exploitation</li>
+            <li><strong>Interactions avec les publicités</strong> (affichages, clics)</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong><span class="emoji">⭐</span>Note importante :</strong> Les utilisateurs Premium ne voient aucune publicité et ces données ne sont pas collectées pour eux.</p>
+        </div>
+
+        <h2>Comment nous utilisons vos informations</h2>
+
+        <h3>Pour fournir nos services</h3>
+        <ul>
+            <li>Créer et gérer votre compte utilisateur</li>
+            <li>Sauvegarder votre progression et vos résultats</li>
+            <li>Personnaliser votre expérience d'apprentissage</li>
+            <li>Synchroniser vos données entre appareils</li>
+        </ul>
+
+        <h3>Pour améliorer l'application</h3>
+        <ul>
+            <li>Analyser l'utilisation pour améliorer les fonctionnalités</li>
+            <li>Identifier et corriger les bugs</li>
+            <li>Développer de nouvelles fonctionnalités éducatives</li>
+            <li>Optimiser les performances de l'application</li>
+        </ul>
+
+        <h3>Pour les utilisateurs gratuits uniquement</h3>
+        <ul>
+            <li>Afficher des publicités pertinentes via Google AdMob</li>
+            <li>Mesurer l'efficacité des publicités</li>
+            <li>Générer des revenus pour maintenir l'application gratuite</li>
+        </ul>
+
+        <h2>Partage de vos informations</h2>
+
+        <h3>Services tiers que nous utilisons</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Rôle</th>
+                    <th>Données partagées</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Supabase</strong></td>
+                    <td>Hébergement et authentification</td>
+                    <td>E-mail, nom d'utilisateur, progression</td>
+                </tr>
+                <tr>
+                    <td><strong>Google AdMob</strong></td>
+                    <td>Publicités (gratuit uniquement)</td>
+                    <td>Identifiant publicitaire, adresse IP</td>
+                </tr>
+                <tr>
+                    <td><strong>Apple/Google Store</strong></td>
+                    <td>Traitement des paiements</td>
+                    <td>Informations de transaction</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warning-box">
+            <p><strong><span class="emoji">🚫</span>Nous ne vendons JAMAIS vos données</strong></p>
+            <p>Nous ne vendons, ne louons, ni n'échangeons vos données personnelles à des tiers à des fins commerciales.</p>
+        </div>
+
+        <h2>Publicités et suivi</h2>
+
+        <h3>Désactiver les publicités personnalisées</h3>
+
+        <p><strong>Sur iOS :</strong></p>
+        <ol>
+            <li>Ouvrez <strong>Réglages</strong> &gt; <strong>Confidentialité</strong> &gt; <strong>Publicité</strong></li>
+            <li>Activez <strong>Suivi publicitaire limité</strong></li>
+        </ol>
+
+        <p><strong>Sur Android :</strong></p>
+        <ol>
+            <li>Ouvrez <strong>Paramètres</strong> &gt; <strong>Google</strong> &gt; <strong>Annonces</strong></li>
+            <li>Activez <strong>Désactiver la personnalisation des annonces</strong></li>
+        </ol>
+
+        <div class="highlight">
+            <p><strong><span class="emoji">⭐</span>Ou passez à Premium :</strong> Aucune publicité ne sera affichée.</p>
+        </div>
+
+        <h2>Vos droits (RGPD)</h2>
+
+        <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Droit</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Droit d'accès</strong></td>
+                    <td>Demander une copie de toutes vos données personnelles</td>
+                </tr>
+                <tr>
+                    <td><strong>Droit de rectification</strong></td>
+                    <td>Corriger vos données inexactes ou incomplètes</td>
+                </tr>
+                <tr>
+                    <td><strong>Droit à l'effacement</strong></td>
+                    <td>Demander la suppression de toutes vos données</td>
+                </tr>
+                <tr>
+                    <td><strong>Droit à la portabilité</strong></td>
+                    <td>Recevoir vos données dans un format lisible</td>
+                </tr>
+                <tr>
+                    <td><strong>Droit d'opposition</strong></td>
+                    <td>S'opposer au traitement de vos données</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Comment exercer vos droits</h3>
+        <p>Pour exercer vos droits, contactez-nous par e-mail. Nous répondrons dans un délai de <strong>30 jours</strong>.</p>
+
+        <h3>Suppression de compte</h3>
+        <p>Pour supprimer votre compte et toutes vos données :</p>
+        <ol>
+            <li>Ouvrez l'application RéviZON</li>
+            <li>Allez dans <strong>Profil</strong> &gt; <strong>Paramètres</strong></li>
+            <li>Sélectionnez <strong>Supprimer mon compte</strong></li>
+            <li>Confirmez la suppression</li>
+        </ol>
+
+        <div class="warning-box">
+            <p><strong><span class="emoji">⚠️</span>Attention :</strong> Cette action est irréversible. Toutes vos données (progression, résultats, badges) seront définitivement supprimées.</p>
+        </div>
+
+        <h2>Sécurité de vos données</h2>
+
+        <p>Nous prenons la sécurité de vos données très au sérieux :</p>
+        <ul>
+            <li><strong><span class="emoji">🔒</span>Chiffrement</strong> : Toutes les données sont chiffrées en transit (HTTPS/TLS)</li>
+            <li><strong><span class="emoji">🔐</span>Authentification sécurisée</strong> : Mots de passe hachés et salés via Supabase</li>
+            <li><strong><span class="emoji">🛡️</span>Serveurs sécurisés</strong> : Infrastructure conforme aux normes de sécurité</li>
+            <li><strong><span class="emoji">👥</span>Accès limité</strong> : Seules les personnes autorisées ont accès aux données</li>
+        </ul>
+
+        <h2>Protection des mineurs</h2>
+        <p>
+            RéviZON est destiné aux élèves de 3ème (généralement 14-15 ans). Nous ne collectons pas sciemment de données d'enfants de moins de 13 ans.
+            Si nous découvrons qu'un enfant de moins de 13 ans nous a fourni des informations personnelles, nous supprimerons immédiatement ces informations.
+        </p>
+
+        <h2>Résumé simplifié</h2>
+
+        <div class="info-box">
+            <h3>Ce que nous collectons :</h3>
+            <ul>
+                <li><span class="emoji">✅</span> E-mail et nom d'utilisateur (pour votre compte)</li>
+                <li><span class="emoji">✅</span> Votre progression dans les leçons et quiz</li>
+                <li><span class="emoji">✅</span> Données publicitaires (version gratuite uniquement)</li>
+            </ul>
+
+            <h3>Ce que nous ne faisons PAS :</h3>
+            <ul>
+                <li><span class="emoji">❌</span> Vendre vos données</li>
+                <li><span class="emoji">❌</span> Partager vos informations personnelles sans consentement</li>
+                <li><span class="emoji">❌</span> Collecter des données bancaires (géré par Apple/Google)</li>
+                <li><span class="emoji">❌</span> Afficher des pubs aux utilisateurs Premium</li>
+            </ul>
+
+            <h3>Vos droits :</h3>
+            <ul>
+                <li><span class="emoji">👁️</span> Accéder à vos données</li>
+                <li><span class="emoji">✏️</span> Corriger vos données</li>
+                <li><span class="emoji">🗑️</span> Supprimer votre compte</li>
+                <li><span class="emoji">🚫</span> Refuser les publicités personnalisées</li>
+                <li><span class="emoji">⭐</span> Passer à Premium = Aucune publicité</li>
+            </ul>
+        </div>
+
+        <div class="contact-box">
+            <h2>Contact</h2>
+            <p>Pour toute question concernant cette politique ou vos données personnelles :</p>
+            <p><a href="mailto:contact@revizon.app">contact@revizon.app</a></p>
+            <p style="margin-top: 20px; font-size: 0.9em;">Réponse sous 72 heures ouvrées</p>
+        </div>
+
+        <h2>Conformité</h2>
+        <p>Cette politique de confidentialité est conforme à :</p>
+        <ul>
+            <li><strong>RGPD</strong> (Règlement Général sur la Protection des Données - UE)</li>
+            <li><strong>Loi Informatique et Libertés</strong> (France)</li>
+            <li><strong>Directives Google Play Store et Apple App Store</strong></li>
+            <li><strong>Politiques Google AdMob</strong></li>
+        </ul>
+
+        <div class="footer">
+            <p><strong>RéviZON - Application éducative pour la réussite au Brevet</strong></p>
+            <p>© 2026 RéviZON. Tous droits réservés.</p>
+            <p style="margin-top: 15px;">
+                <strong>Réclamations :</strong> Commission Nationale de l'Informatique et des Libertés (CNIL) -
+                <a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -23,7 +23,7 @@ const getAdUnitId = () => {
   return __DEV__
     ? TestIds.INTERSTITIAL
     : Platform.select({
-        ios: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY',
+        ios: 'ca-app-pub-2885775986633981/3962282308',
         android: 'ca-app-pub-2885775986633981/5186598597',
       }) || TestIds.INTERSTITIAL;
 };

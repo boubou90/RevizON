@@ -38,7 +38,7 @@ export function AdBanner() {
   const adUnitId = __DEV__
     ? TestIds.BANNER
     : Platform.select({
-        ios: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY',
+        ios: 'ca-app-pub-2885775986633981/9897135263',
         android: 'ca-app-pub-2885775986633981/6826983329',
       }) || TestIds.BANNER;
 
@@ -74,8 +74,8 @@ export function AdaptiveBanner() {
   const adUnitId = __DEV__
     ? TestIds.BANNER
     : Platform.select({
-        ios: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY',
-        android: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY',
+        ios: 'ca-app-pub-2885775986633981/9897135263',
+        android: 'ca-app-pub-2885775986633981/6826983329',
       }) || TestIds.BANNER;
 
   return (
