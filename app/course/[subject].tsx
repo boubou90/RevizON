@@ -25,12 +25,6 @@ export default function CourseScreen() {
   const subjectData = allSubjects.find((s) => s.id === subject);
   const lessons = (coursesData as any)[subject as string] || [];
 
-  // Debug: afficher les données chargées
-  console.log('Subject:', subject);
-  console.log('SubjectData:', subjectData);
-  console.log('Lessons count:', lessons.length);
-  console.log('Available keys in coursesData:', Object.keys(coursesData));
-
   const handleLessonPress = (lesson: any, index: number) => {
     if (!canAccessLesson(index)) {
       Alert.alert(
