@@ -33,11 +33,6 @@
       "resizeMode": "contain",
       "backgroundColor": "#FFFFFF"
     },
-    "web": {
-      "bundler": "metro",
-      "output": "single",
-      "favicon": "./assets/icon.png"
-    },
     "plugins": [
       "expo-router",
       "expo-font",
