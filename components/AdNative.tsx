@@ -1,4 +1,4 @@
-import { usePremium } from '@/contexts/PremiumContext';
+import { usePremium } from '@/contexts/RevenueCatContext';
 
 interface AdNativeProps {
   /**

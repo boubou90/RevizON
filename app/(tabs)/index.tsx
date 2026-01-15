@@ -13,7 +13,7 @@ import { Flame, Target, Trophy, ClipboardCheck, Star } from 'lucide-react-native
 import { useUser } from '@/contexts/UserContext';
 import { useProgress } from '@/contexts/ProgressContext';
 import { useGamification } from '@/contexts/GamificationContext';
-import { usePremium } from '@/contexts/PremiumContext';
+import { usePremium } from '@/contexts/RevenueCatContext';
 import { COLORS, SUBJECTS } from '@/utils/constants';
 import { AdBanner } from '@/components/AdBanner';
 

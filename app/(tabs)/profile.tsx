@@ -28,7 +28,7 @@ import ViewShot from 'react-native-view-shot';
 import { useUser } from '@/contexts/UserContext';
 import { useProgress } from '@/contexts/ProgressContext';
 import { useGamification } from '@/contexts/GamificationContext';
-import { usePremium } from '@/contexts/PremiumContext';
+import { usePremium } from '@/contexts/RevenueCatContext';
 import { useAuth } from '@/contexts/AuthContext';
 import { COLORS, BADGES } from '@/utils/constants';
 import { ShareCard } from '@/components/ShareCard';
