@@ -6,6 +6,13 @@ RevenueCat a été intégré dans RéviZON pour gérer les achats in-app et les 
 
 ## 🔑 Configuration
 
+### Informations de l'application
+
+- **App name** : RevizON
+- **Bundle ID (iOS)** : com.revizon.app
+- **Package name (Android)** : com.revizon.app
+- **RevenueCat App ID** : app8e834f49ae
+
 ### Variables d'environnement
 
 Les clés API RevenueCat sont configurées dans `eas.json` pour chaque environnement :
@@ -25,6 +32,7 @@ Le produit premium configuré sur RevenueCat :
 - **Product ID** : `RevizON`
 - **Prix** : 1,99€ (achat unique)
 - **Type** : Non-consommable
+- **RevenueCat App ID** : app8e834f49ae
 
 ## 🏗️ Architecture
 
@@ -200,11 +208,20 @@ Pour la publication en production, il faudra :
 
 ## ⚙️ Configuration RevenueCat Dashboard
 
+### Application RevenueCat
+
+- **App ID** : `app8e834f49ae`
+- **App name** : RevizON
+- **Bundle ID** : com.revizon.app
+- **API Key (Google Play)** : goog_iNYEzUapRefLRcAAyrGFhqtmImK
+
 ### Produit configuré
 
 - **Identifier** : `RevizON`
 - **Type** : Non-Consumable (achat unique)
 - **Prix** : 1,99€
+- **Store Product ID (iOS)** : `RevizON`
+- **Store Product ID (Android)** : `RevizON`
 
 ### Entitlement
 
