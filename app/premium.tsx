@@ -18,42 +18,42 @@ import {
   Shield,
   CheckCircle,
 } from 'lucide-react-native';
-import { usePremium } from '@/contexts/PremiumContext';
+import { usePremium } from '@/contexts/RevenueCatContext';
 import { useGamification } from '@/contexts/GamificationContext';
 import { COLORS } from '@/utils/constants';
 
 export default function PremiumScreen() {
   const router = useRouter();
-  const { upgradeToPremium, isPremium } = usePremium();
+  const { purchasePremium, restorePurchases, isPremium, products, loading } = usePremium();
   const { unlockBadge } = useGamification();
 
   const handlePurchase = async () => {
-    Alert.alert(
-      'Confirmation',
-      'Passer à Premium pour 1,99€ ?',
-      [
-        { text: 'Annuler', style: 'cancel' },
-        {
-          text: 'Acheter',
-          onPress: async () => {
-            const success = await upgradeToPremium('test');
-            if (success) {
-              await unlockBadge('premium');
-              Alert.alert(
-                'Bienvenue Premium ! 👑',
-                'Tu as maintenant accès à tout le contenu !',
-                [
-                  {
-                    text: 'Génial !',
-                    onPress: () => router.back(),
-                  },
-                ]
-              );
-            }
+    const success = await purchasePremium();
+    if (success) {
+      await unlockBadge('premium');
+      Alert.alert(
+        'Bienvenue Premium ! 👑',
+        'Tu as maintenant accès à tout le contenu !',
+        [
+          {
+            text: 'Génial !',
+            onPress: () => router.back(),
           },
-        },
-      ]
-    );
+        ]
+      );
+    }
+  };
+
+  const handleRestore = async () => {
+    await restorePurchases();
+  };
+
+  // Obtenir le prix du produit depuis RevenueCat
+  const getProductPrice = () => {
+    if (products && products.length > 0) {
+      return products[0].priceString || '1,99€';
+    }
+    return '1,99€';
   };
 
   const features = [
@@ -105,6 +105,15 @@ export default function PremiumScreen() {
           >
             <Text style={styles.backHomeButtonText}>Retour</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.restoreButton}
+            onPress={handleRestore}
+          >
+            <Text style={styles.restoreButtonText}>
+              Restaurer mes achats
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -138,7 +147,7 @@ export default function PremiumScreen() {
             Débloque tout le contenu pour réviser efficacement
           </Text>
           <View style={styles.priceTag}>
-            <Text style={styles.priceAmount}>1,99€</Text>
+            <Text style={styles.priceAmount}>{getProductPrice()}</Text>
             <Text style={styles.priceLabel}>Achat unique</Text>
           </View>
         </LinearGradient>
@@ -208,7 +217,7 @@ export default function PremiumScreen() {
           >
             <Crown size={24} color={COLORS.white} />
             <Text style={styles.purchaseButtonText}>
-              Passer à Premium - 1,99€
+              Passer à Premium - {getProductPrice()}
             </Text>
           </LinearGradient>
         </TouchableOpacity>
@@ -216,6 +225,15 @@ export default function PremiumScreen() {
         <Text style={styles.disclaimer}>
           Paiement sécurisé • Achat unique • Sans abonnement
         </Text>
+
+        <TouchableOpacity
+          style={styles.restoreButton}
+          onPress={handleRestore}
+        >
+          <Text style={styles.restoreButtonText}>
+            Déjà acheté ? Restaurer mes achats
+          </Text>
+        </TouchableOpacity>
 
         <View style={styles.bottomSpace} />
       </ScrollView>
@@ -373,6 +391,16 @@ const styles = StyleSheet.create({
     color: COLORS.gray,
     textAlign: 'center',
     marginBottom: 12,
+  },
+  restoreButton: {
+    padding: 16,
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  restoreButtonText: {
+    fontSize: 14,
+    color: COLORS.primary,
+    fontWeight: '600',
   },
   alreadyPremiumContainer: {
     flex: 1,
