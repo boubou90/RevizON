@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Platform } from 'react-native';
-import { usePremium } from '@/contexts/PremiumContext';
+import { usePremium } from '@/contexts/RevenueCatContext';
 
 // Import dynamique pour éviter les erreurs en mode Expo Go
 let InterstitialAd: any = null;

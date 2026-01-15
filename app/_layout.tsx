@@ -6,7 +6,7 @@ import { AuthProvider, useAuth } from '@/contexts/AuthContext';
 import { UserProvider } from '@/contexts/UserContext';
 import { ProgressProvider } from '@/contexts/ProgressContext';
 import { GamificationProvider } from '@/contexts/GamificationContext';
-import { PremiumProvider } from '@/contexts/PremiumContext';
+import { RevenueCatProvider } from '@/contexts/RevenueCatContext';
 
 function RootLayoutNav() {
   const { user, loading } = useAuth();
@@ -82,10 +82,10 @@ export default function RootLayout() {
       <UserProvider>
         <ProgressProvider>
           <GamificationProvider>
-            <PremiumProvider>
+            <RevenueCatProvider>
               <RootLayoutNav />
               <StatusBar style="auto" />
-            </PremiumProvider>
+            </RevenueCatProvider>
           </GamificationProvider>
         </ProgressProvider>
       </UserProvider>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Platform } from 'react-native';
-import { usePremium } from '@/contexts/PremiumContext';
+import { usePremium } from '@/contexts/RevenueCatContext';
 
 // Import dynamique pour éviter les erreurs en mode Expo Go
 let BannerAd: any = null;

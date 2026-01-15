@@ -10,7 +10,7 @@ import {
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { ArrowLeft, Lock, CheckCircle, PlayCircle, ClipboardCheck } from 'lucide-react-native';
 import { useProgress } from '@/contexts/ProgressContext';
-import { usePremium } from '@/contexts/PremiumContext';
+import { usePremium } from '@/contexts/RevenueCatContext';
 import { COLORS, SUBJECTS, HISTORY_SUBJECTS } from '@/utils/constants';
 import { coursesData } from '@/data/coursesData';
 import { AdNative } from '@/components/AdNative';

@@ -24,18 +24,14 @@
         "backgroundColor": "#FFFFFF"
       },
       "permissions": [
-        "INTERNET"
+        "INTERNET",
+        "com.android.vending.BILLING"
       ]
     },
     "splash": {
       "image": "./assets/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#FFFFFF"
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "single",
-      "favicon": "./assets/icon.png"
     },
     "plugins": [
       "expo-router",
