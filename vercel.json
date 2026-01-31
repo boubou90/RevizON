@@ -1,8 +1,9 @@
 {
   "buildCommand": "npx expo export -p web",
   "outputDirectory": "dist",
+  "trailingSlash": false,
+  "cleanUrls": true,
   "rewrites": [
-    { "source": "/app-ads.txt", "destination": "/app-ads.txt" },
-    { "source": "/((?!_expo|assets|favicon\\.ico|app-ads\\.txt).*)", "destination": "/index.html" }
+    { "source": "/:path((?!app-ads\\.txt|_expo|assets|favicon\\.ico).*)", "destination": "/index.html" }
   ]
 }
