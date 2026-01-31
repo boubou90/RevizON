@@ -1,20 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Platform } from 'react-native';
 import { usePremium } from '@/contexts/PremiumContext';
-
-// Import dynamique pour éviter les erreurs en mode Expo Go
-let BannerAd: any = null;
-let BannerAdSize: any = null;
-let TestIds: any = null;
-
-try {
-  const ads = require('react-native-google-mobile-ads');
-  BannerAd = ads.BannerAd;
-  BannerAdSize = ads.BannerAdSize;
-  TestIds = ads.TestIds;
-} catch (e) {
-  // Module non disponible (Expo Go)
-}
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 /**
  * Composant de bannière publicitaire
@@ -25,11 +12,6 @@ export function AdBanner() {
 
   // Ne pas afficher de pub pour les utilisateurs premium
   if (isPremium) {
-    return null;
-  }
-
-  // Si AdMob n'est pas disponible (Expo Go), ne rien afficher
-  if (!BannerAd) {
     return null;
   }
 
@@ -63,11 +45,6 @@ export function AdaptiveBanner() {
   const { isPremium } = usePremium();
 
   if (isPremium) {
-    return null;
-  }
-
-  // Si AdMob n'est pas disponible (Expo Go), ne rien afficher
-  if (!BannerAd) {
     return null;
   }
 

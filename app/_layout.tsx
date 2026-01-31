@@ -7,6 +7,7 @@ import { UserProvider } from '@/contexts/UserContext';
 import { ProgressProvider } from '@/contexts/ProgressContext';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { PremiumProvider } from '@/contexts/PremiumContext';
+import { initializeAds } from '@/utils/adsInit';
 
 function RootLayoutNav() {
   const { user, loading } = useAuth();
@@ -63,18 +64,9 @@ function RootLayoutNav() {
 export default function RootLayout() {
   useFrameworkReady();
 
-  // Initialiser Google Mobile Ads (seulement si disponible)
+  // Initialiser Google Mobile Ads
   useEffect(() => {
-    const initAds = async () => {
-      try {
-        const mobileAds = await import('react-native-google-mobile-ads');
-        await mobileAds.default().initialize();
-        console.log('AdMob initialisé');
-      } catch (error) {
-        console.log('AdMob non disponible (mode Expo Go)');
-      }
-    };
-    initAds();
+    initializeAds();
   }, []);
 
   return (

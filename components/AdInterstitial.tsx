@@ -1,25 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Platform } from 'react-native';
 import { usePremium } from '@/contexts/PremiumContext';
-
-// Import dynamique pour éviter les erreurs en mode Expo Go
-let InterstitialAd: any = null;
-let AdEventType: any = null;
-let TestIds: any = null;
-
-try {
-  const ads = require('react-native-google-mobile-ads');
-  InterstitialAd = ads.InterstitialAd;
-  AdEventType = ads.AdEventType;
-  TestIds = ads.TestIds;
-} catch (e) {
-  // Module non disponible (Expo Go)
-}
+import { InterstitialAd, AdEventType, TestIds } from 'react-native-google-mobile-ads';
 
 // IDs de test pour le développement
 // IMPORTANT: Remplacer par vos vrais IDs AdMob en production
 const getAdUnitId = () => {
-  if (!TestIds) return '';
   return __DEV__
     ? TestIds.INTERSTITIAL
     : Platform.select({
@@ -40,11 +26,6 @@ export function useInterstitialAd() {
   useEffect(() => {
     // Ne pas charger de pub pour les utilisateurs premium
     if (isPremium) {
-      return;
-    }
-
-    // Si AdMob n'est pas disponible (Expo Go), ne rien faire
-    if (!InterstitialAd || !AdEventType) {
       return;
     }
 
@@ -84,11 +65,6 @@ export function useInterstitialAd() {
    */
   const showAd = async (): Promise<boolean> => {
     if (isPremium) {
-      return false;
-    }
-
-    // Si AdMob n'est pas disponible
-    if (!InterstitialAd) {
       return false;
     }
 
